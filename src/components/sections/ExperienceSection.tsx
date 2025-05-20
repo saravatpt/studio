@@ -3,15 +3,14 @@ import ExperienceCard from '@/components/shared/ExperienceCard';
 
 const experienceData = [
   {
-    role: 'Associate Manager, Software Engineering',
-    company: 'XLHealth India (Optum), Bengaluru',
+    role: 'Technical Lead (Associate Manager, Software Engineering)',
+    company: 'Optum (formerly XLHealth India), Bengaluru',
     duration: '2022 - Present',
     descriptionItems: [
-      'Lead AI/ML initiatives and POC development, manage a cross-functional development team, and oversee end-to-end project delivery including requirements gathering, estimations, technical support, and code/document reviews.',
-      'Developed an AI Agent using Azure OpenAI, RAG, and NLP that automated medical claim reviews, increasing throughput by 100x and reducing manual review time by 80%.',
-      'Developed a Browser Agent using Azure OpenAI, BrowserUse, and OpenCV to automate daily tasks in the claims portal, reducing manual effort by 50%.',
-      'Developed a SQL Agent using Azure OpenAI, Text2SQL, and NLP to help business stakeholders generate database reports through natural language prompts.',
-      'Technologies Used: AutoGen, AzureOpenAI, NLP, BrowserUse, Copilot, Python, Vibe Coding, C#.NET, Web API, Angular, NodeJS, SQL, GIT, UI Path & DevOps.',
+      'Leading a team of 15 members in the development and deployment of real-time automation & AI Agent solutions for claims processing.',
+      'Successfully upskilled and transformed the team into AI/ML Engineers through targeted mentoring and strategic initiatives.',
+      'Initiated and presented AI/ML projects and Proof-of-Concepts (POCs) at CTO-level conferences, leading to organization-wide adoption of new AI capabilities.',
+      'Key technologies: AI Agents (AutoGen, Langchain), RAG, NLP, Azure OpenAI, VertexAI/Gemini, Python, MLOps, C#.NET, Web API, Angular, NodeJS, SQL, GIT, DevOps.',
     ],
   },
   {
@@ -27,9 +26,9 @@ const experienceData = [
   {
     role: 'Senior Software Engineer / Software Engineer',
     company: 'Accenture Services Pvt Ltd, Bengaluru',
-    duration: 'August 2014 - September 2019', // Combined duration from image
+    duration: 'August 2014 - September 2019',
     descriptionItems: [
-      'Developed enhancements for ATLAS, a commodity trading tool, to improve client service (as Senior Software Engineer from 2017-2019 and Software Engineer from 2014-2017).',
+      'Developed enhancements for ATLAS, a commodity trading tool, to improve client service.',
       'Worked on the Telefonica project involving data migration (freezing/terminating Siebel data, activating in SALCUS).',
       'Provided technical support, technical design, development, code review, production defects management, and unit testing. Worked on-site in Germany for several months.',
       'Technologies Used: C#.NET, WinForms, TeamCity, ASP.NET, MVC, Web API & Services, Siebel CRM, VB6, Oracle & PL SQL.',

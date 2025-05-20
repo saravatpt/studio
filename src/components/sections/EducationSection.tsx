@@ -6,13 +6,13 @@ const educationData = [
     degree: 'Master of Computer Applications (Distance Education)',
     institution: 'Anna University, Chennai, Tamil Nadu',
     duration: '2011 - 2014',
-    details: [], // Add details if any, e.g., specialization
+    details: [],
   },
   {
     degree: 'Bachelor of Computer Science',
     institution: 'Sacred Heart College, Tirupattur, Vellore, Tamil Nadu',
     duration: '2006 - 2009',
-    details: [], // Add details if any
+    details: [],
   },
 ];
 

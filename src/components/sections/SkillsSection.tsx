@@ -1,6 +1,6 @@
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SkillBadge from '@/components/shared/SkillBadge';
-import { Code, Database, Cloud, GitFork, BrainCircuit, Settings2, MonitorSmartphone, Palette, Server, Wand2 } from 'lucide-react';
+import { Code, Database, Cloud, GitFork, BrainCircuit, Settings2, MonitorSmartphone, Palette, Server, Wand2, BookOpen } from 'lucide-react';
 
 // Custom SVG icon example (replace with actual SVGs if needed)
 const NextJsIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -27,23 +27,26 @@ const categorizedSkills = [
     categoryTitle: 'AI/ML & GenAI',
     skills: [
       { name: 'AI Agent Development', IconComponent: BrainCircuit },
-      { name: 'NLP', IconComponent: BrainCircuit },
-      { name: 'RAG (Retrieval Augmented Generation)', IconComponent: BrainCircuit },
       { name: 'Autogen', IconComponent: BrainCircuit },
       { name: 'Langchain', IconComponent: BrainCircuit },
       { name: 'Transformers', IconComponent: BrainCircuit },
+      { name: 'RAG', IconComponent: BrainCircuit },
       { name: 'TensorFlow', IconComponent: BrainCircuit },
       { name: 'ML Algorithms', IconComponent: BrainCircuit },
+      { name: 'NLP', IconComponent: BrainCircuit },
       { name: 'OpenAI/GPT', IconComponent: BrainCircuit },
       { name: 'VertexAI/Gemini', IconComponent: BrainCircuit },
-      { name: 'Hugging Face', IconComponent: BrainCircuit },
+      { name: 'MLOps', IconComponent: Settings2 },
+      { name: 'Docker', IconComponent: Cloud, iconClassName: 'text-blue-500' },
       { name: 'Genkit AI', IconComponent: Wand2 },
+      { name: 'Hugging Face', IconComponent: BrainCircuit },
     ]
   },
   {
     categoryTitle: 'Web & Software Frameworks',
     skills: [
-      { name: '.NET Core / ASP.NET', IconComponent: Server },
+      { name: '.NET Core', IconComponent: Server },
+      { name: 'ASP.NET', IconComponent: Server },
       { name: 'Web API', IconComponent: Server },
       { name: 'Angular', IconComponent: Code, iconClassName: 'text-red-600' },
       { name: 'Node.js', IconComponent: Server, iconClassName: 'text-green-500' },
@@ -57,36 +60,35 @@ const categorizedSkills = [
   {
     categoryTitle: 'Databases & Data Management',
     skills: [
-      { name: 'SQL', IconComponent: Database },
-      { name: 'PL/SQL', IconComponent: Database },
       { name: 'NoSQL', IconComponent: Database },
       { name: 'Oracle', IconComponent: Database },
       { name: 'SQL Server', IconComponent: Database },
+      { name: 'PL/SQL', IconComponent: Database },
       { name: 'MongoDB', IconComponent: Database, iconClassName: 'text-green-600' },
       { name: 'Firebase', IconComponent: Database, iconClassName: 'text-yellow-500' },
     ]
   },
   {
-    categoryTitle: 'Cloud, DevOps & MLOps',
+    categoryTitle: 'Cloud, DevOps & Tools',
     skills: [
-      { name: 'MLOps', IconComponent: Settings2 },
-      { name: 'Docker', IconComponent: Cloud, iconClassName: 'text-blue-500' },
-      { name: 'DevOps Practices', IconComponent: Settings2 },
-      { name: 'GitHub', IconComponent: GitFork },
       { name: 'Azure Cloud', IconComponent: Cloud, iconClassName: 'text-sky-600' },
       { name: 'GCP (Google Cloud)', IconComponent: Cloud, iconClassName: 'text-orange-500' },
-    ]
-  },
-  {
-    categoryTitle: 'Development Tools & Other Technologies',
-    skills: [
+      { name: 'DevOps Practices', IconComponent: Settings2 },
+      { name: 'GitHub', IconComponent: GitFork },
       { name: 'Visual Studio', IconComponent: Code },
       { name: 'Cursor', IconComponent: Wand2 },
       { name: 'GitHub Copilot', IconComponent: Wand2 },
       { name: 'SSMS', IconComponent: Database },
       { name: 'Toad', IconComponent: Database },
+    ]
+  },
+  {
+    categoryTitle: 'Other Knowledge',
+    skills: [
       { name: 'Android Development', IconComponent: MonitorSmartphone },
       { name: 'UI Path', IconComponent: Settings2 },
+      { name: 'Teaching', IconComponent: BookOpen },
+      { name: 'Hardware & Networking', IconComponent: Server },
     ]
   }
 ];
