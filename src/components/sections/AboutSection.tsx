@@ -1,15 +1,10 @@
 import SectionWrapper from '@/components/shared/SectionWrapper';
-import DescriptionPersonalizer from '@/components/shared/DescriptionPersonalizer';
-
-const initialAboutText = `Results-driven Software and AI/ML Engineer with 11+ years of experience in software development and 2+ years in building intelligent AI agents. 
-
-Proven expertise in full-stack development, AI/ML integration, and technical leadership. Strong analytical, problem-solving, and team management skills. Currently leading projects at Optum as a Technical Lead, focusing on real-time automation & AI Agent solutions for claims processing, upskilling teams, and driving AI/ML adoption.`;
 
 const AboutSection = () => {
   return (
     <SectionWrapper id="about" title="About Me" className="bg-muted/30">
-      <div className="grid md:grid-cols-2 gap-12 items-start">
-        <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
+      <div className="grid md:grid-cols-1 gap-8 items-start">
+        <div className="space-y-6 text-lg text-foreground/90 leading-relaxed max-w-3xl mx-auto">
             <p>
               I'm a passionate Software and AI/ML Engineer with over 11 years of experience in building impactful software solutions, including more than 2 years focused on intelligent AI agents. I love turning complex problems into smart, scalable systems that make a real difference.
             </p>
@@ -22,9 +17,6 @@ const AboutSection = () => {
             <p>
             I’m always excited about exploring new technologies, solving tough problems, and driving innovation through collaboration and continuous learning.
             </p>
-        </div>
-        <div className="mt-8 md:mt-0">
-          <DescriptionPersonalizer initialDescription={initialAboutText} />
         </div>
       </div>
     </SectionWrapper>

@@ -11,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { sendContactMessage, type SendContactMessageInput } from '@/ai/flows/send-contact-message-flow';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -35,14 +36,29 @@ const ContactForm = () => {
 
   const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
     startTransition(async () => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted:', data);
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      form.reset();
+      try {
+        const result = await sendContactMessage(data as SendContactMessageInput);
+        if (result.success) {
+          toast({
+            title: "Message Sent!",
+            description: result.responseMessage,
+          });
+          form.reset();
+        } else {
+          toast({
+            title: "Error",
+            description: result.responseMessage,
+            variant: "destructive",
+          });
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        toast({
+          title: "Error",
+          description: "An unexpected error occurred. Please try again.",
+          variant: "destructive",
+        });
+      }
     });
   };
 
