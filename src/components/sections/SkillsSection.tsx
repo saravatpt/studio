@@ -1,6 +1,6 @@
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SkillBadge from '@/components/shared/SkillBadge';
-import { Code, Database, Cloud, GitFork, BrainCircuit, Settings2, MonitorSmartphone, Palette, Server } from 'lucide-react';
+import { Code, Database, Cloud, GitFork, BrainCircuit, Settings2, MonitorSmartphone, Palette, Server, Wand2 } from 'lucide-react';
 
 // Custom SVG icon example (replace with actual SVGs if needed)
 const NextJsIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -12,46 +12,75 @@ const TailwindCssIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-
 const skillsData = [
-  { name: 'HTML', IconComponent: Code },
-  { name: 'CSS', IconComponent: Palette },
-  { name: 'JavaScript', IconComponent: Code },
-  { name: 'TypeScript', IconComponent: Code },
-  { name: 'React', IconComponent: Code, iconClassName: 'text-blue-500' },
-  { name: 'Next.js', IconComponent: NextJsIcon, iconClassName: 'text-black dark:text-white' },
-  { name: 'Redux', IconComponent: GitFork },
-  { name: 'Tailwind CSS', IconComponent: TailwindCssIcon },
-  { name: 'Node.js', IconComponent: Server },
-  { name: 'Express.js', IconComponent: Server },
-  { name: 'Python', IconComponent: Code, iconClassName: 'text-yellow-500' },
-  { name: 'Django', IconComponent: Server },
-  { name: 'Flask', IconComponent: Server },
-  { name: 'MongoDB', IconComponent: Database },
-  { name: 'MySQL', IconComponent: Database },
-  { name: 'PostgreSQL', IconComponent: Database },
-  { name: 'Firebase', IconComponent: Database, iconClassName: 'text-yellow-400' },
-  { name: 'Docker', IconComponent: Cloud, iconClassName: 'text-blue-600' },
-  { name: 'Kubernetes', IconComponent: Cloud, iconClassName: 'text-blue-700' },
-  { name: 'Jenkins', IconComponent: Settings2 },
-  { name: 'Git', IconComponent: GitFork },
-  { name: 'GitHub Actions', IconComponent: Settings2 },
-  { name: 'CI/CD', IconComponent: Settings2 },
-  { name: 'AWS', IconComponent: Cloud, iconClassName: 'text-orange-500' },
-  { name: 'GCP', IconComponent: Cloud, iconClassName: 'text-blue-400' },
-  { name: 'Terraform', IconComponent: Cloud },
+  // Languages
+  { name: 'Python', IconComponent: Code, iconClassName: 'text-yellow-400' },
+  { name: 'JavaScript', IconComponent: Code, iconClassName: 'text-yellow-500' },
+  { name: 'C#.NET', IconComponent: Code, iconClassName: 'text-purple-500' },
+  { name: 'VB.NET', IconComponent: Code, iconClassName: 'text-blue-700' },
+  { name: 'C++', IconComponent: Code, iconClassName: 'text-blue-600' },
+  { name: 'SQL', IconComponent: Database },
+
+  // AI/ML
+  { name: 'AI Agent Development', IconComponent: BrainCircuit },
+  { name: 'NLP', IconComponent: BrainCircuit },
+  { name: 'RAG (Retrieval Augmented Generation)', IconComponent: BrainCircuit },
+  { name: 'Autogen', IconComponent: BrainCircuit },
+  { name: 'Langchain', IconComponent: BrainCircuit },
+  { name: 'Transformers', IconComponent: BrainCircuit },
   { name: 'TensorFlow', IconComponent: BrainCircuit },
-  { name: 'PyTorch', IconComponent: BrainCircuit },
-  { name: 'Scikit-learn', IconComponent: BrainCircuit },
-  { name: 'REST APIs', IconComponent: Server },
-  { name: 'GraphQL', IconComponent: Server },
-  { name: 'Linux', IconComponent: MonitorSmartphone },
-  { name: 'Agile/Scrum', IconComponent: Settings2 },
+  { name: 'ML Algorithms', IconComponent: BrainCircuit },
+  { name: 'OpenAI/GPT', IconComponent: BrainCircuit },
+  { name: 'VertexAI/Gemini', IconComponent: BrainCircuit },
+  { name: 'Hugging Face', IconComponent: BrainCircuit },
+  { name: 'Genkit AI', IconComponent: Wand2 },
+
+
+  // Software & Frameworks
+  { name: '.NET Core / ASP.NET', IconComponent: Server },
+  { name: 'Web API', IconComponent: Server },
+  { name: 'Angular', IconComponent: Code, iconClassName: 'text-red-600' },
+  { name: 'Node.js', IconComponent: Server, iconClassName: 'text-green-500' },
+  { name: 'React', IconComponent: Code, iconClassName: 'text-sky-500' },
+  { name: 'Next.js', IconComponent: NextJsIcon, iconClassName: 'dark:text-white text-black'},
+  { name: 'WPF', IconComponent: MonitorSmartphone },
+  { name: 'Winforms', IconComponent: MonitorSmartphone },
+  { name: 'Tailwind CSS', IconComponent: TailwindCssIcon },
+
+
+  // Cloud & DevOps
+  { name: 'MLOps', IconComponent: Settings2 },
+  { name: 'Docker', IconComponent: Cloud, iconClassName: 'text-blue-500' },
+  { name: 'DevOps Practices', IconComponent: Settings2 },
+  { name: 'GitHub', IconComponent: GitFork },
+  { name: 'Azure Cloud', IconComponent: Cloud, iconClassName: 'text-sky-600' },
+  { name: 'GCP (Google Cloud)', IconComponent: Cloud, iconClassName: 'text-orange-500' },
+
+
+  // Databases
+  { name: 'NoSQL', IconComponent: Database },
+  { name: 'Oracle', IconComponent: Database },
+  { name: 'SQL Server', IconComponent: Database },
+  { name: 'PL/SQL', IconComponent: Database },
+  { name: 'MongoDB', IconComponent: Database, iconClassName: 'text-green-600' }, // Added from MERN
+  { name: 'Firebase', IconComponent: Database, iconClassName: 'text-yellow-500' },
+
+
+  // Tools
+  { name: 'Visual Studio', IconComponent: Code },
+  { name: 'Cursor', IconComponent: Wand2 },
+  { name: 'GitHub Copilot', IconComponent: Wand2 },
+  { name: 'SSMS', IconComponent: Database },
+  { name: 'Toad', IconComponent: Database },
+
+  // Other
+  { name: 'Android Development', IconComponent: MonitorSmartphone },
+  { name: 'UI Path', IconComponent: Settings2 },
 ];
 
 const SkillsSection = () => {
   return (
-    <SectionWrapper id="skills" title="My Tech Stack">
+    <SectionWrapper id="skills" title="Technical Skill Set">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
         {skillsData.map((skill) => (
           <SkillBadge key={skill.name} name={skill.name} IconComponent={skill.IconComponent} iconClassName={skill.iconClassName} />

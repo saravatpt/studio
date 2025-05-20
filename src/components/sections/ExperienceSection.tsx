@@ -3,38 +3,36 @@ import ExperienceCard from '@/components/shared/ExperienceCard';
 
 const experienceData = [
   {
-    role: 'Full Stack Developer',
-    company: 'Self-Employed / Freelancer',
-    duration: 'Jan 2021 - Present',
+    role: 'Technical Lead (AI/ML)',
+    company: 'Optum',
+    duration: 'Approx. 2022 - Present', // Based on "2+ years in building AI agents"
     descriptionItems: [
-      'Developed and maintained diverse web applications for clients using MERN stack, Python (Django/Flask).',
-      'Designed and implemented RESTful APIs and GraphQL endpoints for various projects.',
-      'Implemented CI/CD pipelines using GitHub Actions and Jenkins for automated testing and deployment.',
-      'Leveraged AWS (EC2, S3, RDS, Lambda) and GCP (Compute Engine, GKE) for hosting and managing client projects.',
-      'Collaborated with clients to gather requirements, provide technical consultation, and deliver solutions meeting their needs.',
+      'Leading a team of 15 members in the development and deployment of real-time automation & AI Agent solutions for claims processing.',
+      'Successfully upskilled and transformed the team into proficient AI/ML Engineers through targeted mentoring and strategic initiatives.',
+      'Initiated and presented impactful AI/ML projects and Proof-of-Concepts (POCs) at CTO-level conferences, driving organization-wide adoption of new technologies.',
+      'Championing the use of modern AI/ML tools and frameworks like Langchain, RAG, VertexAI, and MLOps practices.',
     ],
   },
   {
-    role: 'Software Development Intern',
-    company: 'Innovatech Solutions (Hypothetical)',
-    duration: 'Jun 2020 - Dec 2020',
+    role: 'Senior Software Engineer / AI Developer',
+    company: 'Previous Engagements (Multiple Organizations)',
+    duration: 'Approx. 2013 - 2021', // Covering the remaining 9 of 11+ years
     descriptionItems: [
-      'Contributed to the development of a new SaaS product, focusing on backend API development using Node.js and Express.',
-      'Assisted in database design and management with MongoDB.',
-      'Gained hands-on experience with agile methodologies, sprint planning, and version control systems (Git).',
-      'Participated in code reviews and collaborated with senior developers on feature implementation.',
+      'Developed and maintained a wide range of software applications using .NET (C#, ASP.NET, .NET Core), Python, and JavaScript frameworks (Angular, Node.js).',
+      'Specialized in full-stack development, RESTful API design, database architecture (SQL Server, Oracle, NoSQL), and cloud platform services (Azure, GCP).',
+      'Contributed to early adoption and integration of AI/ML techniques in software solutions.',
+      'Applied DevOps principles for CI/CD, automated testing, and infrastructure management.',
+      'Consistently delivered high-quality, scalable, and maintainable code in agile environments.',
     ],
   },
 ];
 
 const ExperienceSection = () => {
   return (
-    <SectionWrapper id="experience" title="Work Experience">
+    <SectionWrapper id="experience" title="Professional Experience">
       <div className="space-y-8 relative">
-        {/* Optional: Add a timeline line if desired */}
-        {/* <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 transform -translate-x-1/2 hidden md:block"></div> */}
         {experienceData.map((exp, index) => (
-          <div key={index} className="md:max-w-2xl mx-auto">
+          <div key={index} className="md:max-w-3xl mx-auto"> {/* Increased max-width for better readability */}
             <ExperienceCard {...exp} />
           </div>
         ))}

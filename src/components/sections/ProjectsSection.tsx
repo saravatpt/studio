@@ -3,45 +3,43 @@ import ProjectCard from '@/components/shared/ProjectCard';
 
 const projectsData = [
   {
-    title: 'Profile Canvas (This Website)',
-    description: 'A personal portfolio website built to showcase my skills, projects, and experience, featuring AI-powered description personalization.',
+    title: 'AI-Powered Claims Processing Automation (Optum)',
+    description: 'Led a team of 15 in developing and deploying real-time automation and AI Agent solutions for claims processing, significantly improving operational efficiency and accuracy. This involved transforming the team into AI/ML specialists.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'ai claims processing',
+    tags: ['AI Agent', 'NLP', 'Python', 'MLOps', 'Automation', 'Technical Leadership'],
+    // githubUrl: 'confidential', // Or omit if not public
+  },
+  {
+    title: 'AI/ML Proof-of-Concept Initiative (Optum)',
+    description: 'Initiated and presented multiple strategic AI/ML proof-of-concepts at CTO-level conferences, focusing on emerging technologies like RAG, Langchain, and VertexAI. These efforts led to successful organization-wide adoption of new AI capabilities.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'ai innovation presentation',
+    tags: ['AI/ML Strategy', 'RAG', 'Langchain', 'VertexAI/Gemini', 'POC Development', 'Innovation'],
+  },
+  {
+    title: 'Profile Canvas (This Portfolio)',
+    description: 'A personal portfolio website built with Next.js, React, Tailwind CSS, and ShadCN UI, featuring AI-powered description personalization using Genkit.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'website portfolio',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'ShadCN UI', 'Genkit AI'],
-    githubUrl: 'https://github.com/saravatpt/saravatpt', // Replace with actual repo if different
-    demoUrl: '#', // Link to the live site
+    githubUrl: 'https://github.com/saravatpt/saravatpt', // Assuming this is the correct repo
+    demoUrl: '#',
   },
   {
-    title: 'Automated Cloud Provisioning Tool',
-    description: 'A CLI tool designed to automate the setup and deployment of common cloud infrastructure patterns on AWS and GCP, streamlining DevOps workflows.',
+    title: 'Full-Stack Enterprise Solutions',
+    description: 'Developed and maintained diverse enterprise-level web applications using .NET (C#, ASP.NET Core), Angular, and Node.js, focusing on scalable architectures, API design, and database management (SQL Server, NoSQL).',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'cloud automation',
-    tags: ['Python', 'Boto3', 'Google Cloud SDK', 'Docker', 'CLI'],
-    githubUrl: 'https://github.com/saravatpt/placeholder-repo-1',
-  },
-  {
-    title: 'Smart Task Manager',
-    description: 'A feature-rich MERN stack application for managing tasks with intelligent prioritization, collaboration features, and a clean user interface.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'task manager app',
-    tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Redux', 'REST API'],
-    githubUrl: 'https://github.com/saravatpt/placeholder-repo-2',
-    demoUrl: 'https://example.com/smart-task-manager-demo',
-  },
-   {
-    title: 'AI-Powered Recommendation Engine',
-    description: 'Developed a recommendation system using collaborative filtering and content-based approaches for an e-commerce platform, improving user engagement.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'recommendation system',
-    tags: ['Python', 'Scikit-learn', 'Pandas', 'Flask', 'Machine Learning'],
-    githubUrl: 'https://github.com/saravatpt/placeholder-repo-3',
+    imageHint: 'enterprise software architecture',
+    tags: ['.NET Core', 'Angular', 'Node.js', 'SQL Server', 'Microservices', 'Full-Stack'],
+    // githubUrl: 'https://github.com/saravatpt/placeholder-repo-1', // Example
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <SectionWrapper id="projects" title="Featured Projects" className="bg-muted/30">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <SectionWrapper id="projects" title="Featured Projects & Initiatives" className="bg-muted/30">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"> {/* Adjusted to lg:grid-cols-2 for better display of 4 projects */}
         {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

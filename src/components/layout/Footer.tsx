@@ -8,15 +8,15 @@ const Footer = () => {
           <a href="https://github.com/saravatpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Github className="h-6 w-6" />
           </a>
-          <a href="https://www.linkedin.com/in/saravanan-thangapalam/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/saravantpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Linkedin className="h-6 w-6" />
           </a>
-          <a href="mailto:saravatpt@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="mailto:saravantpt@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
             <Mail className="h-6 w-6" />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} Saravanan. All rights reserved.</p>
-        <p>Built with Next.js, Tailwind CSS, and ❤️</p>
+        <p>&copy; {new Date().getFullYear()} Saravanan Narayanan. All rights reserved.</p>
+        <p>Built with Next.js, Tailwind CSS, ShadCN UI, and Genkit AI.</p>
       </div>
     </footer>
   );
