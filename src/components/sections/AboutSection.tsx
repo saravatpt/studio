@@ -11,13 +11,16 @@ const AboutSection = () => {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
             <p>
-                I am a results-driven Software and AI/ML Engineer with over 11 years of experience in software development, including more than 2 years dedicated to building intelligent AI agents. My career is focused on leveraging technology to create impactful solutions and leading teams towards achieving challenging goals.
+              I'm a passionate Software and AI/ML Engineer with over 11 years of experience in building impactful software solutions, including more than 2 years focused on intelligent AI agents. I love turning complex problems into smart, scalable systems that make a real difference.
             </p>
             <p>
-                My expertise lies in full-stack development, seamless AI/ML integration into software products, and providing strong technical leadership. I possess robust analytical and problem-solving capabilities, complemented by effective team management skills. I am passionate about mentoring and fostering growth within technical teams.
+              My strengths lie in full-stack development, integrating AI/ML seamlessly into products, and leading teams through technical challenges. I enjoy mentoring, sharing knowledge, and helping engineers grow into confident AI/ML practitioners.
             </p>
             <p>
-                Currently, as a Technical Lead at Optum, I spearhead initiatives in developing and deploying real-time automation and AI Agent solutions, particularly for claims processing. A significant part of my role involves upskilling and transforming team members into proficient AI/ML engineers through strategic mentoring and initiatives. I also drive the adoption of AI/ML technologies organisation-wide by initiating projects and presenting proof-of-concepts at executive levels.
+              Currently, I work as a Technical Lead at Optum, where I lead the development of real-time automation and AI agent solutions—especially in the area of claims processing. A big part of my role is guiding my team’s transition into AI/ML engineering through hands-on mentoring and initiatives. I also champion the wider adoption of AI/ML across the organization by launching projects and showcasing proof-of-concepts to leadership.
+            </p>
+            <p>
+            I’m always excited about exploring new technologies, solving tough problems, and driving innovation through collaboration and continuous learning.
             </p>
         </div>
         <div className="mt-8 md:mt-0">

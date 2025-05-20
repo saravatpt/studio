@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
           <CodeXml className="h-8 w-8" />
-          <span>Saravanan Narayanan</span>
+          <span>Saravanan</span>
         </Link>
         <nav className="space-x-4 sm:space-x-6">
           <Link href="#about" className="text-foreground hover:text-primary transition-colors">About</Link>
