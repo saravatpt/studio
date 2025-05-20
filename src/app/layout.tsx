@@ -1,11 +1,11 @@
 import type {Metadata} from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+// import { GeistSans } from 'geist/font/sans';
+// import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = GeistSans;
-const geistMono = GeistMono;
+// const geistSans = GeistSans;
+// const geistMono = GeistMono;
 
 export const metadata: Metadata = {
   title: 'Profile Canvas | Saravanan',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`antialiased`}> {/* Removed geistSans.variable and geistMono.variable */}
         {children}
         <Toaster />
       </body>
