@@ -21,6 +21,12 @@ const projectsData = [
     demoUrl: '#',
   },
   {
+    title: 'LeafWise: AI Plant Care Assistant',
+    description: 'An intelligent plant care assistant leveraging Genkit AI to help users identify plants from photos, diagnose potential issues, and receive tailored care recommendations. Built with Next.js and ShadCN UI.',
+    tags: ['Genkit AI', 'Next.js', 'Image Recognition', 'Plant Care', 'AI Assistant', 'ShadCN UI'],
+    demoUrl: 'https://studio--leafwise-9jn94.us-central1.hosted.app/',
+  },
+  {
     title: 'Full-Stack Enterprise Solutions',
     description: 'Developed and maintained diverse enterprise-level web applications using .NET (C#, ASP.NET Core), Angular, and Node.js, focusing on scalable architectures, API design, and database management (SQL Server, NoSQL).',
     tags: ['.NET Core', 'Angular', 'Node.js', 'SQL Server', 'Microservices', 'Full-Stack'],
@@ -31,7 +37,7 @@ const projectsData = [
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects" title="Featured Projects & Initiatives" className="bg-muted/30">
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"> {/* Adjusted to lg:grid-cols-2 for better display of 4 projects */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"> {/* Adjusted to lg:grid-cols-2 for better display */}
         {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
