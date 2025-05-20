@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
         </div>
         <p>&copy; {new Date().getFullYear()} Saravanan Narayanan. All rights reserved.</p>
-        <p>Built with Next.js, Tailwind CSS, ShadCN UI, and Genkit AI.</p>
+        <p>Built with Firebase Studio, Next.js, Tailwind CSS, ShadCN UI, and Genkit AI.</p>
       </div>
     </footer>
   );

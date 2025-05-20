@@ -6,6 +6,8 @@ import SkillsSection from '@/components/sections/SkillsSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import EducationSection from '@/components/sections/EducationSection';
+import LanguagesSection from '@/components/sections/LanguagesSection';
+import HobbiesSection from '@/components/sections/HobbiesSection';
 import ContactSection from '@/components/sections/ContactSection';
 
 export default function HomePage() {
@@ -19,6 +21,8 @@ export default function HomePage() {
         <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
+        <LanguagesSection />
+        <HobbiesSection />
         <ContactSection />
       </main>
       <Footer />
