@@ -1,3 +1,4 @@
+
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import ProjectCard from '@/components/shared/ProjectCard';
 
@@ -12,13 +13,6 @@ const projectsData = [
     title: 'AI/ML Proof-of-Concept Initiative (Optum)',
     description: 'Initiated and presented multiple strategic AI/ML proof-of-concepts at CTO-level conferences, focusing on emerging technologies like RAG, Langchain, and VertexAI. These efforts led to successful organization-wide adoption of new AI capabilities.',
     tags: ['AI/ML Strategy', 'RAG', 'Langchain', 'VertexAI/Gemini', 'POC Development', 'Innovation'],
-  },
-  {
-    title: 'Profile Canvas (This Portfolio)',
-    description: 'A personal portfolio website built with Next.js, React, Tailwind CSS, and ShadCN UI, featuring AI-powered description personalization using Genkit (now with a functional contact form!).',
-    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'ShadCN UI', 'Genkit AI'],
-    githubUrl: 'https://github.com/saravatpt/saravatpt', // Assuming this is the correct repo
-    demoUrl: '#',
   },
   {
     title: 'LeafWise: AI Plant Care Assistant',
@@ -47,3 +41,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
