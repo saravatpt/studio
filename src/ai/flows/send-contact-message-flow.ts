@@ -1,15 +1,18 @@
+
 // src/ai/flows/send-contact-message-flow.ts
 'use server';
 /**
- * @fileOverview Handles sending contact form messages.
+ * @fileOverview Handles sending contact form messages and saving them to a Markdown file.
  *
  * - sendContactMessage - A function that processes the contact form submission.
  * - SendContactMessageInput - The input type for the sendContactMessage function.
  * - SendContactMessageOutput - The return type for the sendContactMessage function.
  */
 
-import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import { ai } from '@/ai/genkit';
+import { z } from 'genkit';
+import fs from 'fs';
+import path from 'path';
 
 const SendContactMessageInputSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -35,28 +38,44 @@ const sendContactMessageFlow = ai.defineFlow(
     outputSchema: SendContactMessageOutputSchema,
   },
   async (input) => {
-    // In a real application, you would integrate with an email service or database here.
-    // For now, we'll just log it and return a success message.
-    console.log('Contact form submission received:', input);
+    const { name, email, message } = input;
 
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const markdownContent = `
+# New Contact Message
 
-    // This is a placeholder for actual email sending logic or database save.
-    // For now, we'll always simulate success.
-    // TODO: Replace with actual implementation.
-    const isSuccessfullySent = true;
+**Date:** ${new Date().toISOString()}
+**Name:** ${name}
+**Email:** ${email}
 
-    if (isSuccessfullySent) {
+---
+
+**Message:**
+${message}
+    `.trim();
+
+    const messagesDir = path.join(process.cwd(), 'messages');
+    const fileName = `contact_submission_${Date.now()}.md`;
+    const filePath = path.join(messagesDir, fileName);
+
+    try {
+      // Ensure the messages directory exists
+      if (!fs.existsSync(messagesDir)) {
+        fs.mkdirSync(messagesDir, { recursive: true });
+      }
+
+      // Write the file
+      fs.writeFileSync(filePath, markdownContent);
+      console.log(`Contact form submission saved to: ${filePath}`);
+
       return {
         success: true,
-        responseMessage: "Message sent successfully! Thank you for reaching out. I'll get back to you soon.",
+        responseMessage: "Message saved successfully! Thank you for reaching out. I'll get back to you soon.",
       };
-    } else {
-      // This branch is currently not reachable
+    } catch (error) {
+      console.error('Error saving contact message to file:', error);
       return {
         success: false,
-        responseMessage: "Sorry, there was an issue sending your message. Please try again later.",
+        responseMessage: "Sorry, there was an issue saving your message. Please try again later.",
       };
     }
   }
